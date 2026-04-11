@@ -1,351 +1,562 @@
 <!DOCTYPE html>
 
-<html dir="rtl" lang="he"><head>
+<html class="scroll-smooth" dir="rtl" lang="he"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>עורך דין לצוואות וירושות | ביטחון למשפחה</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;family=Heebo:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
-            colors: {
-              "on-background": "#1a1c1d",
-              "secondary-fixed-dim": "#dec482",
-              "on-primary-container": "#8296b0",
-              "tertiary-fixed": "#dde4e5",
-              "surface-variant": "#e2e2e3",
-              "error-container": "#ffdad6",
-              "inverse-on-surface": "#f0f1f1",
-              "inverse-primary": "#b4c8e4",
-              "surface": "#f9f9fa",
-              "on-tertiary-container": "#8e9596",
-              "inverse-surface": "#2f3132",
-              "secondary-container": "#f8dd98",
-              "error": "#ba1a1a",
-              "on-surface-variant": "#43474d",
-              "surface-bright": "#f9f9fa",
-              "surface-container-low": "#f3f3f4",
-              "on-tertiary-fixed-variant": "#414849",
-              "on-tertiary-fixed": "#161d1e",
-              "on-tertiary": "#ffffff",
-              "on-secondary": "#ffffff",
-              "tertiary-fixed-dim": "#c1c8c9",
-              "surface-dim": "#dadadb",
-              "on-secondary-container": "#746128",
-              "tertiary": "#13191a",
-              "on-error": "#ffffff",
-              "on-error-container": "#93000a",
-              "on-secondary-fixed": "#241a00",
-              "surface-container": "#eeeeef",
-              "background": "#f9f9fa",
-              "on-primary-fixed": "#061d32",
-              "primary-fixed-dim": "#b4c8e4",
-              "primary-fixed": "#d1e4ff",
-              "on-primary-fixed-variant": "#35485f",
-              "primary-container": "#1a2e44",
-              "primary": "#03192e",
-              "secondary": "#6f5c24",
-              "surface-container-highest": "#e2e2e3",
-              "tertiary-container": "#272e2f",
-              "outline-variant": "#c4c6cd",
-              "surface-container-high": "#e8e8e9",
-              "on-surface": "#1a1c1d",
-              "on-primary": "#ffffff",
-              "surface-tint": "#4c6078",
-              "outline": "#74777d",
-              "surface-container-lowest": "#ffffff",
-              "on-secondary-fixed-variant": "#56450e",
-              "secondary-fixed": "#fbe09b"
+            "colors": {
+                    "primary": "#0D2149",
+                    "primary-container": "#152E5F",
+                    "on-primary": "#FFFFFF",
+                    "secondary": "#C5A059",
+                    "secondary-container": "#D4B67A",
+                    "on-secondary": "#FFFFFF",
+                    "background": "#FDFDFD",
+                    "surface": "#FFFFFF",
+                    "surface-variant": "#F5F5F7",
+                    "outline": "#C5A059",
+                    "on-surface": "#1A1A1A",
+                    "on-surface-variant": "#4A4A4A"
             },
-            fontFamily: {
-              "headline": ["Newsreader"],
-              "body": ["Work Sans"],
-              "label": ["Work Sans"]
+            "borderRadius": {
+                    "none": "0",
+                    "sm": "0.125rem",
+                    "DEFAULT": "0",
+                    "md": "0",
+                    "lg": "0",
+                    "xl": "0",
+                    "full": "9999px"
             },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            "fontFamily": {
+                    "headline": ["Noto Serif", "serif"],
+                    "body": ["Heebo", "sans-serif"],
+                    "label": ["Heebo", "sans-serif"]
+            }
           },
         },
       }
     </script>
 <style>
         .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            display: inline-block;
-            vertical-align: middle;
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
-        body { font-family: 'Work Sans', sans-serif; }
-        h1, h2, h3 { font-family: 'Newsreader', serif; }
-        .bg-editorial-gradient {
-            background: linear-gradient(135deg, #03192e 0%, #1a2e44 100%);
+        .serif-text { font-family: 'Noto Serif', serif; }
+        .sans-text { font-family: 'Heebo', sans-serif; }
+        
+        .premium-border {
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(135deg, #C5A059 0%, #D4B67A 100%);
+        }
+
+        .hero-overlay {
+            background: linear-gradient(to left, rgba(253, 253, 253, 1) 0%, rgba(253, 253, 253, 0.8) 40%, rgba(253, 253, 253, 0) 100%);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 100;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+        }
+        .whatsapp-float:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Modal specific styles */
+        .modal-overlay {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            transform: scale(0.95);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+        body.modal-open {
+            overflow: hidden;
         }
     </style>
 </head>
-<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
-<!-- Top Navigation Bar -->
-<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm">
-<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-<div class="font-headline text-2xl font-bold text-primary">עו"ד ערן פרידלנדר</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-primary hover:text-secondary transition-colors font-body text-lg italic tracking-tight" href="#about">מי אני</a>
-<a class="text-primary hover:text-secondary transition-colors font-body text-lg italic tracking-tight" href="#services">שירותים</a>
-<a class="text-primary hover:text-secondary transition-colors font-body text-lg italic tracking-tight" href="#contact">צור קשר</a>
-<a class="bg-secondary text-on-secondary px-6 py-2 rounded-md hover:opacity-90 transition-all font-body" href="#contact">ייעוץ ראשוני</a>
+<body class="bg-background text-on-surface sans-text selection:bg-secondary/30">
+<!-- Modals Container -->
+<div id="modal-container">
+<!-- Privacy Policy Modal -->
+<div class="modal-overlay fixed inset-0 z-[100] flex items-center justify-center p-4 bg-primary/80 backdrop-blur-sm" id="modal-privacy">
+<div class="modal-content bg-white w-full max-w-2xl max-h-[80vh] flex flex-col shadow-2xl relative">
+<button class="absolute top-4 left-4 text-primary/40 hover:text-primary transition-colors" onclick="closeModal('modal-privacy')">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+<div class="p-8 border-b border-secondary/20">
+<h3 class="serif-text text-3xl font-bold text-primary">מדיניות פרטיות</h3>
+</div>
+<div class="p-8 overflow-y-auto text-on-surface-variant leading-relaxed"><div class="space-y-4" dir="rtl"><p class="font-bold" dir="rtl">1. כללי</p><p dir="rtl">המשרד מכבד את פרטיות הגולשים. המידע הנאסף בטופס (שם וטלפון) משמש אך ורק לחזרה ללקוח ומתן שירות משפטי, ואינו מועבר לצד שלישי.</p></div></div>
+<div class="p-6 border-t border-secondary/10 flex justify-end">
+<button class="bg-primary text-on-primary px-8 py-2 font-bold tracking-widest text-xs hover:bg-primary-container transition-all" onclick="closeModal('modal-privacy')">סגור</button>
+</div>
+</div>
+</div>
+<!-- Terms of Use Modal -->
+<div class="modal-overlay fixed inset-0 z-[100] flex items-center justify-center p-4 bg-primary/80 backdrop-blur-sm" id="modal-terms">
+<div class="modal-content bg-white w-full max-w-2xl max-h-[80vh] flex flex-col shadow-2xl relative">
+<button class="absolute top-4 left-4 text-primary/40 hover:text-primary transition-colors" onclick="closeModal('modal-terms')">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+<div class="p-8 border-b border-secondary/20">
+<h3 class="serif-text text-3xl font-bold text-primary">תנאי שימוש</h3>
+</div>
+<div class="p-8 overflow-y-auto text-on-surface-variant leading-relaxed">
+<div class="space-y-4">
+<p class="font-bold">1. תנאים והתניות</p>
+<p>ברוכים הבאים לאתר המשרד. השימוש באתר כפוף לתנאים הבאים. לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלרחם סחיר ובלר הנטיק.</p>
+<p>The following terms and conditions govern all use of the website and all content, services and products available at or through the website.</p>
+<p class="font-bold">2. קניין רוחני</p>
+<p>מוסיק וורגש גולר מונפרר סוזטי. למנו סחירט קולורס מונפרר שכנוע. תשחילה וגרמיגבס סחיר הנטיק. צשחילה סוסטי דולור סיט אמט.</p>
+<p>Intellectual Property. This Agreement does not transfer from the Firm to you any third party intellectual property, and all right, title and interest in and to such property will remain solely with the Firm.</p>
+<p class="font-bold">3. הגבלת אחריות</p>
+<p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלרחם סחיר ובלר הנטיק. מוסיק וורגש גולר מונפרר סוזטי.</p>
+<p>In no event will the Firm, or its suppliers or licensors, be liable with respect to any subject matter of this agreement under any contract, negligence, strict liability or other legal or equitable theory.</p>
+</div>
+</div>
+<div class="p-6 border-t border-secondary/10 flex justify-end">
+<button class="bg-primary text-on-primary px-8 py-2 font-bold tracking-widest text-xs hover:bg-primary-container transition-all" onclick="closeModal('modal-terms')">סגור</button>
+</div>
+</div>
+</div>
+<!-- Accessibility Modal -->
+<div class="modal-overlay fixed inset-0 z-[100] flex items-center justify-center p-4 bg-primary/80 backdrop-blur-sm" id="modal-accessibility">
+<div class="modal-content bg-white w-full max-w-2xl max-h-[80vh] flex flex-col shadow-2xl relative">
+<button class="absolute top-4 left-4 text-primary/40 hover:text-primary transition-colors" onclick="closeModal('modal-accessibility')">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+<div class="p-8 border-b border-secondary/20">
+<h3 class="serif-text text-3xl font-bold text-primary">הצהרת נגישות</h3>
+</div>
+<div class="p-8 overflow-y-auto text-on-surface-variant leading-relaxed"><div class="space-y-4" dir="rtl"><p class="font-bold" dir="rtl">נגישות האתר</p><p dir="rtl">אתר זה עומד בתקן נגישות WCAG 2.1 ברמה AA. בוצעו התאמות לניווט מקלדת וקוראי מסך. אם נתקלתם בקושי, פנו לעו"ד ערן פרידלנדר בטלפון 055-9944171.</p></div></div>
+<div class="p-6 border-t border-secondary/10 flex justify-end">
+<button class="bg-primary text-on-primary px-8 py-2 font-bold tracking-widest text-xs hover:bg-primary-container transition-all" onclick="closeModal('modal-accessibility')">סגור</button>
+</div>
+</div>
+</div>
+</div>
+<!-- WhatsApp Button -->
+<a aria-label="WhatsApp" class="whatsapp-float" href="https://wa.me/972559944171" style="" target="_blank">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.733 5.476 2.016 7.781l-2.016 7.359 7.545-1.981c2.253 1.221 4.843 1.921 7.604 1.921 8.837 0 16-7.163 16-16s-7.163-16-16-16zm8.811 22.511c-0.368 1.037-1.821 1.911-2.521 2.021-0.7 0.111-1.397 0.203-4.485-1.072-3.896-1.612-6.421-5.571-6.616-5.831-0.195-0.26-1.581-2.101-1.581-4.008 0-1.907 0.995-2.843 1.352-3.232 0.355-0.389 0.776-0.487 1.037-0.487s0.519 0.003 0.744 0.013c0.237 0.011 0.552-0.089 0.864 0.661 0.325 0.781 1.104 2.695 1.201 2.892 0.097 0.197 0.162 0.428 0.032 0.687s-0.195 0.422-0.389 0.649c-0.195 0.226-0.413 0.503-0.584 0.675-0.195 0.195-0.399 0.408-0.172 0.798s1.007 1.655 2.164 2.684c1.489 1.325 2.747 1.737 3.136 1.932s0.617 0.162 0.844-0.1c0.227-0.26 0.974-1.134 1.234-1.523s0.519-0.325 0.876-0.195c0.357 0.13 2.273 1.071 2.662 1.266s0.649 0.292 0.744 0.455c0.097 0.162 0.097 0.941-0.271 1.978z"></path>
+</svg>
+</a>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-secondary/20">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-5">
+<div class="serif-text text-2xl font-bold text-primary flex items-center gap-3" style="">
+<span class="w-10 h-1 bg-secondary inline-block"></span>
+                עורך דין לצוואות וירושות
+            </div>
+<div class="hidden lg:flex gap-10 items-center">
+<a class="sans-text text-sm font-bold tracking-widest text-primary border-b-2 border-secondary pb-1" href="#" style="">דף הבית</a>
+<a class="sans-text text-sm font-bold tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors" href="#services" style="">שירותים</a>
+<a class="sans-text text-sm font-bold tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors" href="#about" style="">אודות</a>
+<a class="sans-text text-sm font-bold tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors" href="#contact" style="">צור קשר</a>
+</div>
+<div class="flex items-center gap-8">
+<a class="hidden sm:block text-primary font-bold tracking-tighter text-lg" href="tel:0559944171" style="">055-9944171</a>
+<a class="bg-primary text-on-primary px-8 py-3 text-sm font-bold tracking-widest hover:bg-primary-container transition-all flex items-center justify-center" href="#contact">ייעוץ ראשוני</a>
+</div>
+</div>
 </nav>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined" data-icon="menu">menu</span>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-background">
+<div class="absolute inset-0 z-0">
+<img alt="שולחן עבודה משפטי עם עט נובע - עורך דין לצוואות וירושות" class="w-full h-full object-cover object-center opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgEVVTOskkPbZSaggxX_Axfi4Cl0oFbZpGz5T4uIbrZNaDssXkykGPQN0dLUmekWJOBl5PEB3__4WZgfLl9RAKIijiMsh1lDZO-e-GnWiuBnBhbnQk70yMOO0OiiLhwW2CYWqiDZc2mfH_kVjlW6GDMVuxbiVdXe_CywWVpRrNVjz5SS7w4qnkD9YCKlyvkfBQpOJ1aCc6BN-ll3yW-eJttfLvRDifi6dJPaJeOFiYV_9jiwOBew3EAxJhAYj2ZT6Ve0XtRq5psXY" style=""/>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-3xl">
+<div class="flex items-center gap-4 mb-8">
+<span class="h-px w-12 bg-secondary"></span>
+<span class="text-xs font-bold tracking-[0.2em] text-secondary uppercase" style="">Excellence in Legal Practice</span>
+</div>
+<h1 class="serif-text text-6xl md:text-8xl font-bold leading-[1.1] text-primary mb-10" style="">
+                    דואגים לעתיד <br/>המשפחה שלכם
+                </h1>
+<p class="text-xl text-on-surface-variant leading-relaxed mb-12 max-w-xl" style="">
+                    ליווי משפטי רגיש ומקצועי בעריכת צוואות וייפוי כוח מתמשך. אנחנו כאן כדי להבטיח שהרצונות שלכם יכובדו והיקרים לכם יהיו מוגנים, בשקט נפשי מלא.
+                </p>
+<div class="flex flex-wrap gap-6">
+<a class="bg-primary text-on-primary px-12 py-5 font-bold tracking-widest text-sm hover:translate-y-[-2px] hover:shadow-xl transition-all flex items-center justify-center" href="#contact">קביעת פגישת ייעוץ</a>
+<button class="group flex items-center gap-3 text-primary font-bold tracking-widest text-sm" style="">
+<span class="" style="">למידע נוסף על שירותי המשרד</span>
+<span class="material-symbols-outlined group-hover:translate-x-[-4px] transition-transform" style="">arrow_back</span>
 </button>
 </div>
+</div>
+</div>
 </header>
-<main class="pt-24">
-<!-- Hero Section -->
-<section class="relative overflow-hidden min-h-[870px] flex items-center bg-surface pb-16">
-<div class="max-w-7xl mx-auto px-8 w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-<div class="md:col-span-7 z-10">
-<span class="inline-block px-4 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-sm font-medium mb-6">ביטחון משפחתי לעתיד</span>
-<h1 class="text-display-lg text-5xl md:text-7xl font-headline italic tracking-tight text-primary leading-tight mb-8">
-                        ייפוי כוח מתמשך:<br/>
-                        השקט הנפשי שלך ושל משפחתך.
-                    </h1>
-<p class="text-xl md:text-2xl text-on-surface-variant font-body mb-10 max-w-xl leading-relaxed">
-                        אל תשאיר את העתיד שלך ליד המקרה. עו"ד ערן פרידלנדר מעניק ליווי משפטי אישי ומקצועי להבטחת רצונך וביטחון יקיריך.
-                    </p>
-<div class="flex flex-col sm:flex-row gap-4">
-<a class="bg-primary text-on-primary px-8 py-4 rounded-md text-lg font-semibold hover:opacity-95 transition-all flex items-center justify-center gap-2 group" href="#contact">
-<span class="">צרו קשר לייעוץ ראשוני</span>
-<span class="material-symbols-outlined group-hover:translate-x-[-4px] transition-transform" data-icon="arrow_back">arrow_back</span>
-</a>rvices">
-                            למה זה הכרחי?
-                        </a>
+<!-- Continuing Power of Attorney Dominant Section -->
+<section class="py-40 bg-primary-container relative overflow-hidden" id="power-of-attorney">
+<div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[40rem] absolute -top-40 -left-40 text-white" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
 </div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="space-y-10">
+<div class="inline-block border-r-4 border-secondary pr-6">
+<span class="text-secondary font-bold tracking-[0.2em] text-xs uppercase block mb-2">Essential Legal Protection</span>
+<h2 class="serif-text text-5xl md:text-6xl font-bold text-white leading-tight">ייפוי כוח מתמשך:<br/><span class="text-secondary">השליטה המלאה בידיים שלכם</span></h2>
 </div>
-<div class="md:col-span-5 relative">
-<div class="absolute -inset-4 bg-secondary-fixed/30 rounded-full blur-3xl"></div>
-<div class="relative rounded-xl overflow-hidden shadow-2xl transform md:rotate-2 border-8 border-surface-container-lowest">
-<img alt="Eran Friedlander Lawyer" class="w-full aspect-[4/5] object-cover" data-alt="Professional portrait of lawyer Eran Friedlander in a white shirt and black tie." src="https://lh3.googleusercontent.com/aida/ADBb0ujrq-YmQDoC9fOLVqUL1Qh2VLjfkcZ-v6MvaLvmt1L9vkHNSgyV_t8YKwd3KHESIYCJriCHKcQ0beOQHeDu7Jn7ALZZGwJWHNIatXGXb2RreeHu23T_-CI14athltUT0yhILsftILBpl0Bz-p2IFAmX2SfF7YIMS_PzLZAOhW7wMwdaAniQdVCtCRRFcSUGaL2_lkeLtCi-6yg01G5kvNb9J3qOaItkUcdZYH81u_wNoJfwcq0OKwIQRdzQr6JOhxFeKA29ZSyIEQ"/>
+<div class="space-y-6 text-on-primary/90 text-xl leading-relaxed">
+<p class="font-bold text-white text-2xl">אל תתנו לאחרים להחליט עבורכם.</p>
+<p>ייפוי כוח מתמשך הוא הכלי המשפטי היחיד המבטיח שאתם, ורק אתם, תקבעו מי יטפל בענייניכם האישיים, הרפואיים והרכושיים ביום שבו לא תוכלו לעשות זאת בעצמכם. <strong>ללא ייפוי כוח כזה, המדינה ובית המשפט עלולים למנות לכם אפוטרופוס חיצוני - אדם שלא בחרתם, שיקבל החלטות גורליות על חייכם.</strong></p>
 </div>
-</div>
-</div>
-</section>
-<!-- Bento Grid: Why Essential? -->
-<section class="py-24 bg-surface-container-low" id="services">
-<div class="max-w-7xl mx-auto px-8">
-<div class="mb-16 md:ml-[25%]">
-<h2 class="text-4xl md:text-5xl font-headline text-primary mb-6">עוגן של ודאות בעולם משתנה</h2>
-<p class="text-lg text-on-surface-variant max-w-2xl font-body">הכנה של ייפוי כוח מתמשך היא לא רק הליך משפטי, אלא מתנה שאתה מעניק לעצמך ולמשפחתך – הידיעה שההחלטות החשובות בחייך יישארו בידיים הנכונות.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<!-- Bento Item 1 -->
-<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-xl shadow-sm border border-outline-variant/10 flex flex-col justify-between hover:bg-surface-bright transition-colors">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 py-8 border-y border-white/10">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl shrink-0" style="font-variation-settings: 'FILL' 1;">how_to_reg</span>
 <div>
-<span class="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="gavel">gavel</span>
-<h3 class="text-3xl font-headline text-primary mb-4">חירות הבחירה שלך</h3>
-<p class="text-on-surface-variant font-body text-lg leading-relaxed">
-                                ללא ייפוי כוח מתמשך, במקרה של אובדן כשירות, המדינה היא שתחליט מי ינהל את ענייניכם. ייפוי כוח מתמשך מחזיר את השליטה אליכם.
-                            </p>
-</div>
-<div class="mt-8 flex gap-2">
-<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed text-xs rounded-full">שליטה מלאה</span>
-<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed text-xs rounded-full">מניעת אפוטרופסות</span>
+<h4 class="text-white font-bold mb-2">בחירה אישית</h4>
+<p class="text-on-primary/70 text-sm">אתם בוחרים את האדם הקרוב אליכם ביותר לנהל את ענייניכם.</p>
 </div>
 </div>
-<!-- Bento Item 2 -->
-<div class="bg-editorial-gradient p-10 rounded-xl text-on-primary shadow-lg flex flex-col">
-<span class="material-symbols-outlined text-secondary-fixed-dim text-4xl mb-6" data-icon="family_history">family_history</span>
-<h3 class="text-2xl font-headline mb-4">מניעת סכסוכים משפחתיים</h3>
-<p class="font-body opacity-90 leading-relaxed">הנחיות ברורות מראש מונעות אי-הבנות ומתחים בין בני המשפחה ברגעים הקשים ביותר.</p>
-</div>
-<!-- Bento Item 3 -->
-<div class="bg-surface-container-lowest p-10 rounded-xl shadow-sm border border-outline-variant/10 hover:bg-surface-bright transition-colors">
-<span class="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="shield_with_heart">shield_with_heart</span>
-<h3 class="text-2xl font-headline text-primary mb-4">הגנה על רכוש ורווחה</h3>
-<p class="text-on-surface-variant font-body">ניהול נכסים, החלטות רפואיות ואיכות חיים בהתאם לסטנדרטים שהצבת לעצמך כל חייך.</p>
-</div>
-<!-- Bento Item 4 -->
-<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-xl shadow-sm border border-outline-variant/10 flex items-center gap-8 hover:bg-surface-bright transition-colors">
-<div class="hidden sm:block w-32 h-32 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-secondary text-5xl" data-icon="history_edu">history_edu</span>
-</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl shrink-0" style="font-variation-settings: 'FILL' 1;">gavel</span>
 <div>
-<h3 class="text-2xl font-headline text-primary mb-2">מוסמך משרד המשפטים</h3>
-<p class="text-on-surface-variant font-body">עו"ד ערן פרידלנדר הינו עורך דין מוסמך על ידי האפוטרופוס הכללי לעריכת ייפוי כוח מתמשך, הנחיות מקדימות וייפוי כוח רפואי.</p>
+<h4 class="text-white font-bold mb-2">ללא בתי משפט</h4>
+<p class="text-on-primary/70 text-sm">חוסך את הצורך במינוי אפוטרופוס ודיווחים תקופתיים מתישים לביהמ"ש.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl shrink-0" style="font-variation-settings: 'FILL' 1;">family_restroom</span>
+<div>
+<h4 class="text-white font-bold mb-2">שקט למשפחה</h4>
+<p class="text-on-primary/70 text-sm">מונע קונפליקטים משפחתיים ומסיר מהם את נטל הבירוקרטיה והספקות.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl shrink-0" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+<div>
+<h4 class="text-white font-bold mb-2">כבוד ורצון חופשי</h4>
+<p class="text-on-primary/70 text-sm">הבטחה מלאה שרצונותיכם האישיים והרפואיים ימולאו במדויק.</p>
+</div>
+</div>
+</div>
+<div class="pt-8 flex flex-col sm:flex-row items-center gap-8">
+<a class="w-full sm:w-auto bg-secondary text-primary px-12 py-6 font-bold tracking-widest text-base hover:bg-white hover:scale-105 transition-all shadow-2xl flex items-center justify-center" href="#contact">הבטיחו את עתידכם עכשיו - ייעוץ ייפוי כוח</a>
+<div class="text-on-primary/60 text-sm font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">verified</span>
+                        מוסמך ע"י האפוטרופוס הכללי
+                    </div>
+</div>
+</div>
+<div class="relative lg:block">
+<div class="absolute inset-0 bg-secondary/10 -translate-x-8 translate-y-8"></div>
+<div class="relative bg-white p-4 shadow-2xl">
+<img alt="שולחן עבודה משפטי עם עט נובע - עורך דין לצוואות וירושות" class="w-full h-auto object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgEVVTOskkPbZSaggxX_Axfi4Cl0oFbZpGz5T4uIbrZNaDssXkykGPQN0dLUmekWJOBl5PEB3__4WZgfLl9RAKIijiMsh1lDZO-e-GnWiuBnBhbnQk70yMOO0OiiLhwW2CYWqiDZc2mfH_kVjlW6GDMVuxbiVdXe_CywWVpRrNVjz5SS7w4qnkD9YCKlyvkfBQpOJ1aCc6BN-ll3yW-eJttfLvRDifi6dJPaJeOFiYV_9jiwOBew3EAxJhAYj2ZT6Ve0XtRq5psXY"/>
+<div class="absolute -bottom-6 -right-6 bg-secondary p-8 text-primary shadow-xl max-w-xs">
+<p class="serif-text font-bold text-xl leading-tight">"הזמן הטוב ביותר לדאוג למחר הוא כשהכל בסדר היום."</p>
+</div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Stats Section -->
-<section class="py-16 bg-primary text-on-primary">
-<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
-<div class="space-y-2">
-<div class="text-4xl font-headline text-secondary-fixed-dim">מומחיות</div>
-<div class="text-sm uppercase tracking-widest font-label opacity-70">ייפוי כוח מתמשך</div>
-</div>
-<div class="space-y-2"><div class="text-4xl font-headline text-secondary-fixed-dim">זמינות גבוהה</div><div class="text-sm uppercase tracking-widest font-label opacity-70">זמינות לכל שאלה</div></div>
-<div class="space-y-2">
-<div class="text-4xl font-headline text-secondary-fixed-dim">100%</div>
-<div class="text-sm uppercase tracking-widest font-label opacity-70">יחס אישי</div>
-</div>
-<div class="space-y-2">
-<div class="text-4xl font-headline text-secondary-fixed-dim">2</div>
-<div class="text-sm uppercase tracking-widest font-label opacity-70">סניפים לשירותכם</div>
-</div>
-</div>
-</section>
-<!-- About Me / Timeline -->
-<section class="py-24 bg-surface" id="about">
+<!-- Standard Services Bento Grid -->
+<section class="py-40 bg-white" id="services">
 <div class="max-w-7xl mx-auto px-8">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-<div class="order-2 md:order-1">
-<h2 class="text-4xl md:text-5xl font-headline text-primary mb-8 italic">נעים להכיר, עו"ד ערן פרידלנדר</h2>
-<div class="space-y-6 text-lg text-on-surface-variant font-body leading-relaxed">
-<p>אני מאמין שכל אדם זכאי להזדקן בכבוד ולשמור על האוטונומיה שלו גם בשלבים המאתגרים של החיים. הניסיון שצברתי מאפשר לי לזהות את הצרכים הייחודיים של כל לקוח ומשפחה.</p>
-<p>התהליך אצלי מתחיל בהקשבה עמוקה. אני לא רק ממלא טפסים – אני בונה יחד איתכם את מפת הדרכים לעתידכם, תוך התחשבות במורכבויות המשפחתיות, הכלכליות והרגשיות.</p>
-<p class="font-semibold text-primary italic">"החוק נתן לנו כלי עוצמתי לשמור על כבודנו – המשימה שלי היא לעזור לכם להשתמש בו בחוכמה."</p>
+<div class="mb-24">
+<span class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 block" style="">Legal Expertise</span>
+<h2 class="serif-text text-5xl font-bold text-primary" style="">שירותי המשרד</h2>
+<div class="w-24 h-1.5 bg-secondary mt-8"></div>
 </div>
-<div class="mt-10 pt-10 border-t border-outline-variant/30 flex flex-wrap gap-4">
-<div class="flex items-center gap-2 text-primary font-medium">
-<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
-<span>כפר ורדים</span>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+<!-- Service 1 -->
+<div class="md:col-span-12 lg:col-span-8 bg-surface-variant p-16 card-hover flex flex-col justify-between min-h-[400px] border-r-4 border-secondary">
+<div>
+<span class="material-symbols-outlined text-secondary text-5xl mb-12" data-icon="history_edu" style="">history_edu</span>
+<h3 class="serif-text text-4xl font-bold text-primary mb-6" style="">צוואות וירושות</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl" style="">
+                            תכנון והעברת עושר בין-דורי בדיוק מקסימלי. אנו מלווים אתכם בעריכת צוואות המונעות סכסוכים משפחתיים עתידיים ומבטיחות שחלוקת הרכוש תתבצע בדיוק לפי רצונכם, תוך התחשבות בכל ההיבטים המיסויים והמשפטיים.
+                        </p>
 </div>
-<div class="flex items-center gap-2 text-primary font-medium">
-<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
-<span>תל אביב</span>
+<div class="mt-12">
+<a class="text-primary font-bold text-sm tracking-widest flex items-center gap-2 group" href="#" style="">
+                            למידע נוסף <span class="material-symbols-outlined text-sm group-hover:translate-x-[-4px] transition-transform" style="">arrow_back</span>
+</a>
+</div>
+</div>
+<!-- Small Focus Card -->
+<div class="md:col-span-12 lg:col-span-4 bg-primary p-12 text-center flex flex-col justify-center items-center">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6" data-icon="balance" style="">balance</span>
+<h4 class="serif-text font-bold text-2xl text-white mb-4" style="">דיוק משפטי מחמיר</h4>
+<p class="text-on-primary/70 leading-relaxed" style="">כל מסמך נערך תוך הקפדה יתרה על הפרטים הקטנים ביותר כדי להבטיח תוקף משפטי מלא.</p>
 </div>
 </div>
 </div>
-<div class="order-1 md:order-2">
+</section>
+<!-- Why Us Section -->
+<section class="py-40 bg-background relative overflow-hidden" id="about">
+<!-- Subtle background detail -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-surface-variant -z-10"></div>
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
 <div class="relative group">
-<div class="absolute -top-6 -right-6 w-full h-full border-2 border-secondary rounded-xl transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
-<img alt="Legal Office" class="relative rounded-xl shadow-xl w-full h-96 object-cover" data-alt="close-up of a high-end legal office with dark wood textures, leather books, and warm ambient lighting representing professional authority" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2NietIOC8uWZAKCKhLHNt1BQrV_MPsPF7CzzVahku8G8nZMal5BoT7A_E-PCMpEaJuyqwluwv9gph8QrZBBCAElNWzl9S2Y1v9y3qoJvYDfCqAHGA4h20rVXzxapOTDFX6I3QhOIlAvWK0VCCTcQIkE1V9Vnq9no2Akutn_F1Obvq4539IR6JLveEfPrTN3HrCv0JCCBVXb28DQXOaEx7N0IpDh-4gnV0m5sedPfNNYLGYCZxX1iQb_4qbM6HjRAcwY8oVM4upDE"/>
+<div class="relative z-10 p-4 bg-white shadow-2xl">
+<img alt="עורך דין מומחה לצוואות וייפוי כוח מתמשך" class="w-full aspect-[4/5] object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhHYZ4fjd8Lxl0h8lvY74MekznG4JqLz5ummFl7fq37j3NEbqUGdNl_XNO3TU3xr2K5ClMrHVP-F_8R0ClHuFm2j08JUo1rOaepuXSlvXqv8Z9_C74tFLlKPZSTCMxZXY-l-BcUddpj9-XIR4DJUJsyiKmrrMIn-PlwbHqpf1h-u5fj2IyzfbCmuzKB-zS2lKwGicjzQYWtOPzu4jSa7lbnW-9krHC7aS4kBeW0FUShnp-Pna3BVuG6ebmheXJ9XyIRPLgvpwXoAg" style=""/>
+</div>
+<div class="absolute -bottom-10 -left-10 w-full h-full border-4 border-secondary -z-0"></div>
+</div>
+<div>
+<span class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 block" style="">About the Firm</span>
+<h2 class="serif-text text-5xl font-bold text-primary mb-12" style="">מדוע לבחור בליווי האישי שלנו?</h2>
+<div class="space-y-16">
+<div class="flex gap-8 group">
+<div class="flex-shrink-0 w-16 h-16 bg-primary text-secondary flex items-center justify-center transition-all group-hover:bg-secondary group-hover:text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="person_search" style="">person_search</span>
+</div>
+<div>
+<h4 class="serif-text font-bold text-2xl text-primary mb-4" style="">גישה אנושית ונגישה</h4>
+<p class="text-on-surface-variant text-lg leading-relaxed" style="">אנחנו מאמינים שנושאים רגישים דורשים שיחה בגובה העיניים. המשרד שלנו מספק סביבה רגועה ובטוחה לשיתוף וקבלת החלטות מושכלות.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<div class="flex-shrink-0 w-16 h-16 bg-primary text-secondary flex items-center justify-center transition-all group-hover:bg-secondary group-hover:text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="task_alt" style="">task_alt</span>
+</div>
+<div>
+<h4 class="serif-text font-bold text-2xl text-primary mb-4" style="">מחויבות אישית לכל לקוח</h4>
+<p class="text-on-surface-variant text-lg leading-relaxed" style="">אין אצלנו "שטאנצים". כל צוואה וכל ייפוי כוח נתפרים בדיוק למידות המשפחה והצרכים הספציפיים שלכם.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<div class="flex-shrink-0 w-16 h-16 bg-primary text-secondary flex items-center justify-center transition-all group-hover:bg-secondary group-hover:text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="gavel" style="">gavel</span>
+</div>
+<div>
+<h4 class="serif-text font-bold text-2xl text-primary mb-4" style="">יושרה מקצועית ללא פשרות</h4>
+<p class="text-on-surface-variant text-lg leading-relaxed" style="">המוניטין שלנו נבנה על אמון ודיוק. אנו פועלים בשקיפות מלאה ומבטיחים כי המסמכים יעמדו במבחן הזמן והחוק.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- Testimonials -->
-<section class="py-24 bg-surface-container-low">
+<section class="py-40 bg-primary text-on-primary">
 <div class="max-w-7xl mx-auto px-8">
-<h2 class="text-3xl font-headline text-primary mb-12 text-center italic">לקוחות מספרים</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Placeholder Testimonial 1 -->
-<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm italic font-body text-on-surface-variant relative">
-<span class="absolute top-4 right-4 text-secondary/20 text-6xl font-serif">"</span>
-<p class="mb-6 relative z-10">ערן ליווה אותנו בתהליך הרגיש הזה במקצועיות ובסבלנות שאין כמותה. הוא ידע לשאול את השאלות הנכונות ולתת לנו ביטחון מלא.</p>
-<div class="font-semibold text-primary">— משפחת לוי, תל אביב</div>
+<div class="text-center mb-24">
+<span class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 block" style="">Client Success Stories</span>
+<h2 class="serif-text text-5xl font-bold" style="">מה הלקוחות שלנו אומרים</h2>
 </div>
-<!-- Placeholder Testimonial 2 -->
-<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm italic font-body text-on-surface-variant relative">
-<span class="absolute top-4 right-4 text-secondary/20 text-6xl font-serif">"</span>
-<p class="mb-6 relative z-10">לא ידענו כמה זה חשוב עד שערן הסביר לנו את ההשלכות. בזכותו אנחנו ישנים טוב יותר בלילה.</p>
-<div class="font-semibold text-primary">— אברהם ושרה כהן</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="p-12 border border-white/10 relative card-hover bg-white/5">
+<span class="serif-text text-8xl text-secondary opacity-30 absolute top-4 right-8" style="">"</span>
+<p class="text-xl italic mb-10 leading-relaxed relative z-10" style="">
+                        "הרגשתי שיש מי שמקשיב לי באמת. התהליך של עריכת ייפוי הכוח המתמשך היה ברור, רגיש ומאוד מקצועי. עכשיו אני שקט."
+                    </p>
+<div class="font-bold text-secondary tracking-widest text-sm" style="">— משפחת כהן, תל אביב</div>
 </div>
-<!-- Placeholder Testimonial 3 -->
-<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm italic font-body text-on-surface-variant relative">
-<span class="absolute top-4 right-4 text-secondary/20 text-6xl font-serif">"</span>
-<p class="mb-6 relative z-10">מומחה אמיתי בתחומו. השירות היה מהיר, נעים ומסודר להפליא.</p>
-<div class="font-semibold text-primary">— ד"ר רונית ר.
+<div class="p-12 border border-white/10 relative card-hover bg-white/5">
+<span class="serif-text text-8xl text-secondary opacity-30 absolute top-4 right-8" style="">"</span>
+<p class="text-xl italic mb-10 leading-relaxed relative z-10" style="">
+                        "הדיוק בפרטים הקטנים והיכולת להסביר מונחים משפטיים סבוכים בצורה פשוטה הפכו את עריכת הצוואה לחוויה חיובית."
+                    </p>
+<div class="font-bold text-secondary tracking-widest text-sm" style="">— אברהם ל., ירושלים</div>
+</div>
+<div class="p-12 border border-white/10 relative card-hover bg-white/5">
+<span class="serif-text text-8xl text-secondary opacity-30 absolute top-4 right-8" style="">"</span>
+<p class="text-xl italic mb-10 leading-relaxed relative z-10" style="">
+                        "תחושת הביטחון שקיבלנו מהרגע הראשון הייתה שווה הכל. ליווי מקצועי מהדרגה הראשונה עם לב ענק."
+                    </p>
+<div class="font-bold text-secondary tracking-widest text-sm" style="">— שרה ומיכאל ר., הרצליה</div>
 </div>
 </div>
 </div>
-</div></section>
+</section>
 <!-- Contact Section -->
-<section class="py-24 bg-surface" id="contact">
+<section class="py-40 bg-white" id="contact">
 <div class="max-w-7xl mx-auto px-8">
-<div class="bg-editorial-gradient rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
-<div class="md:w-1/2 p-12 text-on-primary">
-<h2 class="text-4xl font-headline mb-8">בואו נדבר</h2>
-<p class="text-lg opacity-80 mb-10 font-body">אני מזמין אתכם לפגישת היכרות שבה נבין יחד את הצרכים שלכם ונבטיח את העתיד שלכם.</p>
-<div class="space-y-6">
-<a class="flex items-center gap-4 hover:text-secondary-fixed-dim transition-colors group" href="mailto:office@eflawyer.net">
-<span class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-all">
-<span class="material-symbols-outlined" data-icon="mail">mail</span>
-</span>
-<span class="text-lg font-body">office@eflawyer.net</span>
-</a>
-<a class="flex items-center gap-4 hover:text-secondary-fixed-dim transition-colors group" href="tel:0559944171">
-<span class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-all">
-<span class="material-symbols-outlined" data-icon="call">call</span>
-</span>
-<span class="text-lg font-body">055-9944171</span>
-</a>
+<div class="flex flex-col lg:flex-row shadow-2xl">
+<!-- Contact Info -->
+<div class="lg:w-2/5 bg-primary p-16 lg:p-24 text-on-primary">
+<h2 class="serif-text text-4xl font-bold mb-10" style="">צרו קשר לייעוץ אישי</h2>
+<p class="text-lg text-on-primary/70 mb-16 leading-relaxed" style="">הצעד הראשון לביטחון המשפחה שלכם מתחיל בשיחה. השאירו פרטים ונחזור אליכם בהקדם.</p>
+<div class="space-y-12">
+<div class="flex items-center gap-6 group">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="call" style="">call</span>
+<a class="text-xl font-bold tracking-tighter hover:text-secondary transition-colors" href="tel:0559944171" style="">055-9944171</a>
 </div>
-<div class="mt-12 space-y-4 border-t border-white/10 pt-8">
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary-fixed-dim mt-1" data-icon="location_on">location_on</span>
+<div class="flex items-center gap-6 group">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="mail" style="">mail</span>
+<a class="text-lg hover:text-secondary transition-colors" href="#contact" style="">office@eflawyer.net</a>
+</div>
+<div class="space-y-6 pt-6 border-t border-white/10">
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined text-secondary text-3xl mt-1" data-icon="location_on" style="">location_on</span>
 <div>
-<div class="font-semibold">סניף תל אביב</div>
-<div class="opacity-70 text-sm">דרך בגין 150, תל אביב</div>
+<div class="font-bold mb-1" style="">סניף צפון</div>
+<div class="text-on-primary/70" style="">כפר ורדים</div>
 </div>
 </div>
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary-fixed-dim mt-1" data-icon="location_on">location_on</span>
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined text-secondary text-3xl mt-1" data-icon="location_on" style="">location_on</span>
 <div>
-<div class="font-semibold">סניף צפון</div>
-<div class="opacity-70 text-sm">כפר ורדים</div>
+<div class="font-bold mb-1" style="">סניף תל אביב</div>
+<div class="text-on-primary/70" style="">דרך מנחם בגין 150</div>
 </div>
 </div>
 </div>
 </div>
-<div class="md:w-1/2 bg-surface-container-lowest p-12">
-<form id="contact" action="https://formspree.io/f/mzdkekpr" class="space-y-6" method="POST"><div>
-<label class="block text-sm font-label text-on-surface-variant mb-2">שם מלא</label>
-<input class="w-full bg-transparent border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-secondary py-3 text-lg transition-all" name="name" required="" type="text"/>
 </div>
-<div>
-<label class="block text-sm font-label text-on-surface-variant mb-2">טלפון ליצירת קשר</label>
-<input class="w-full bg-transparent border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-secondary py-3 text-lg transition-all" name="phone" required="" type="tel"/>
+<!-- Contact Form -->
+<div class="lg:w-3/5 bg-surface-variant p-16 lg:p-24">
+<form action="https://formspree.io/f/mzdkekpr" class="space-y-10" id="contact-form" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="relative">
+<label class="block text-xs font-bold tracking-widest text-primary uppercase mb-3" style="">שם מלא</label>
+<input class="w-full bg-white border-0 border-b-2 border-primary/10 focus:border-secondary transition-colors py-4 px-0 outline-none text-lg" name="full_name" placeholder="ישראל ישראלי" type="text"/>
 </div>
-<div>
-<label class="block text-sm font-label text-on-surface-variant mb-2">הודעה (אופציונלי)</label>
-<textarea class="w-full bg-transparent border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-secondary py-3 text-lg transition-all" name="message" rows="3"></textarea>
+<div class="relative">
+<label class="block text-xs font-bold tracking-widest text-primary uppercase mb-3" style="">טלפון</label>
+<input class="w-full bg-white border-0 border-b-2 border-primary/10 focus:border-secondary transition-colors py-4 px-0 outline-none text-lg" name="phone" placeholder="050-0000000" type="tel"/>
 </div>
-<button class="w-full bg-secondary text-on-secondary py-4 rounded-md font-bold text-lg hover:shadow-lg transition-all mt-6 active:scale-95" type="submit">
-                                שלח הודעה
-                            </button>
-<p class="text-xs text-center text-on-surface-variant/60 font-body">הפנייה תשלח ישירות למייל המשרד office@eflawyer.net</p>
+</div>
+<div class="relative">
+<label class="block text-xs font-bold tracking-widest text-primary uppercase mb-3" style="">דוא"ל</label>
+<input class="w-full bg-white border-0 border-b-2 border-primary/10 focus:border-secondary transition-colors py-4 px-0 outline-none text-lg" name="email" placeholder="example@email.com" type="email"/>
+</div>
+<div class="relative">
+<label class="block text-xs font-bold tracking-widest text-primary uppercase mb-3" style="">איך נוכל לעזור?</label>
+<textarea class="w-full bg-white border-0 border-b-2 border-primary/10 focus:border-secondary transition-colors py-4 px-0 outline-none text-lg" name="message" placeholder="הודעה קצרה..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-6 font-bold tracking-widest text-sm hover:bg-secondary hover:text-primary transition-all shadow-xl" style="">
+                            שלח פנייה למשרד
+                        </button>
 </form>
 </div>
 </div>
 </div>
 </section>
-</main>
 <!-- Footer -->
-<footer class="bg-primary text-on-primary">
-<div class="flex gap-8 font-body text-sm tracking-wide"><button class="text-slate-400 hover:text-white transition-colors" onclick="showLegal('terms')">תנאי שימוש</button><button class="text-slate-400 hover:text-white transition-colors" onclick="showLegal('privacy')">מדיניות פרטיות</button><button class="text-slate-400 hover:text-white transition-colors" onclick="showLegal('accessibility')">הצהרת נגישות</button></div>
-</footer>
-<!-- Mobile Floating CTA -->
-<div class="fixed bottom-6 left-6 md:hidden z-40">
-<a class="w-14 h-14 bg-secondary text-on-secondary rounded-full flex items-center justify-center shadow-xl" href="tel:0559944171">
-<span class="material-symbols-outlined" data-icon="call" style="font-variation-settings: 'FILL' 1;">call</span>
+<footer class="w-full py-24 px-8 bg-white border-t border-secondary/20">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-16 items-start mb-20">
+<div class="lg:col-span-2">
+<div class="serif-text font-bold text-primary text-3xl mb-8 flex items-center gap-4" style="">
+<span class="w-12 h-1 bg-secondary inline-block"></span>
+                        עורך דין לצוואות וירושות
+                    </div>
+<p class="text-on-surface-variant text-lg max-w-md leading-relaxed mb-10" style="">
+                        ליווי משפטי המשלב מקצועיות ללא פשרות עם רגישות אנושית. אנחנו כאן כדי להעניק לכם שקט נפשי ולהבטיח את עתיד היקרים לכם.
+                    </p>
+<div class="flex gap-6">
+<a class="w-10 h-10 rounded-full border border-secondary/30 flex items-center justify-center text-primary hover:bg-secondary hover:border-secondary transition-all" href="#" style="">
+<span class="material-symbols-outlined text-xl" style="">gavel</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-secondary/30 flex items-center justify-center text-primary hover:bg-secondary hover:border-secondary transition-all" href="https://wa.me/972559944171" style="">
+<span class="material-symbols-outlined text-xl" style="">chat</span>
 </a>
 </div>
-<div class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" id="legal-modal"><div class="bg-surface max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-xl p-8 shadow-2xl relative"><button class="absolute top-4 left-4 text-on-surface-variant hover:text-primary" onclick="document.getElementById('legal-modal').classList.add('hidden')"><span class="material-symbols-outlined">close</span></button><h2 class="text-2xl font-headline text-primary mb-6 italic" id="modal-title"></h2><div class="font-body text-on-surface-variant leading-relaxed space-y-4" id="modal-body"></div></div></div><script>
-function showLegal(type) {
-  const modal = document.getElementById('legal-modal');
-  const title = document.getElementById('modal-title');
-  const body = document.getElementById('modal-body');
-  
-  const content = {
-    terms: {
-      title: 'תנאי שימוש',
-      text: 'השימוש באתר זה מיועד למתן מידע כללי בלבד ואינו מהווה ייעוץ משפטי. כל פעולה המבוססת על המידע באתר היא על אחריות המשתמש בלבד. המידע באתר עשוי להשתנות מעת לעת ללא הודעה מוקדמת.'
-    },
-    privacy: {
-      title: 'מדיניות פרטיות',
-      text: 'אנו מכבדים את פרטיותכם. הפרטים הנמסרים בטופס יצירת הקשר משמשים אך ורק לצורך חזרה אליכם ומתן שירות. המשרד מתחייב לא להעביר את פרטיכם לצד שלישי ללא הסכמתכם.'
-    },
-    accessibility: {
-      title: 'הצהרת נגישות',
-      text: 'משרדנו פועל להנגשת האתר והשירותים לכלל האוכלוסייה. האתר מונגש לפי תקן WCAG 2.1 ברמה AA. במידה ונתקלתם בקושי בנגישות, נשמח אם תצרו עמנו קשר בטלפון 055-9944171.'
+</div>
+<div>
+<h5 class="serif-text font-bold text-primary text-xl mb-8" style="">פרטי קשר</h5>
+<div class="space-y-4 text-on-surface-variant text-sm">
+<p class="font-bold text-primary" style="">055-9944171</p>
+<p class="" style="">office@eflawyer.net</p>
+<p class="" style="">סניף כפר ורדים</p>
+<p class="" style="">סניף תל אביב - בגין 150</p>
+</div>
+</div>
+<div>
+<h5 class="serif-text font-bold text-primary text-xl mb-8" style="">ניווט מהיר</h5>
+<div class="flex flex-col gap-4 text-sm font-bold tracking-widest uppercase text-on-surface-variant/70">
+<a class="hover:text-secondary transition-colors" href="#" style="">דף הבית</a>
+<a class="hover:text-secondary transition-colors" href="#services" style="">שירותים</a>
+<a class="hover:text-secondary transition-colors" href="#about" style="">אודות</a>
+<a class="hover:text-secondary transition-colors" href="#contact" style="">צור קשר</a>
+</div>
+</div>
+</div>
+<div class="pt-12 border-t border-secondary/10 flex flex-col md:flex-row justify-between items-center gap-8 text-on-surface-variant/50 text-xs font-bold tracking-widest uppercase">
+<div class="" style="">כל הזכויות שמורות לערן פרידלנדר משרד עורכי דין © 2024</div>
+<div class="flex gap-10">
+<button class="hover:text-primary transition-colors cursor-pointer" onclick="openModal('modal-privacy')">מדיניות פרטיות</button>
+<button class="hover:text-primary transition-colors cursor-pointer" onclick="openModal('modal-terms')">תנאי שימוש</button>
+<button class="hover:text-primary transition-colors cursor-pointer" onclick="openModal('modal-accessibility')">הצהרת נגישות</button>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.add('active');
+            document.body.classList.add('modal-open');
+        }
     }
-  };
 
-  title.innerText = content[type].title;
-  body.innerText = content[type].text;
-  modal.classList.remove('hidden');
-}
-</script></body></html>
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        }
+    }
+
+    // Close on click outside
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal-overlay')) {
+            event.target.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        }
+    }
+
+    // Close on escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Escape") {
+            const activeModal = document.querySelector('.modal-overlay.active');
+            if (activeModal) {
+                activeModal.classList.remove('active');
+                document.body.classList.remove('modal-open');
+            }
+        }
+    });
+</script>
+</body></html>
